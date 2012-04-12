@@ -38,9 +38,10 @@ from xbmcswift import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 
 def urlparse(url):
     '''Takes a url and returns a 3 tuple of scheme, netloc and path'''
-    scheme, remainder = url.split('://', 1)
-    netloc, path = remainder.split('/', 1)
-    return scheme, netloc, '/' + path
+    #scheme, remainder = url.split('://', 1)
+    #netloc, path = remainder.split('/', 1)
+    #return scheme, netloc, '/' + path
+    return '', '', url[5:]+ '/'
 
 def clean_dict(d):
     '''Verifies none of the values are None, otherwise XBMC wll break'''
